@@ -1,0 +1,37 @@
+.cover_wrapper{
+  display:flex;
+  width:100%;
+  height:100%;
+  position:fixed;
+  justify-content:center;
+  align-items:center;
+  top:0;
+  left:0;
+  z-index:999;
+  background:rgba(0, 0, 0, 0.6);
+  text-align:center;
+
+  .container{
+    width:22rem;
+    background:#ffffff;
+    border-radius:5px;
+    position:relative;
+    padding:2rem;
+    a.close{
+      position:absolute;
+      top:3px;
+      right:6px;
+      font-size:2.2rem;
+    }
+    .content{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      width:100%;
+      margin:0 auto;
+    }
+  }
+}

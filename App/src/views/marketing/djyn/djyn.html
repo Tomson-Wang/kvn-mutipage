@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1" name="viewport">
+  <title>东京一年</title>
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/swiper-3.4.2.min.css">
+  <style>
+    html, body{
+      height:100%;
+    }
+
+    #button-next{
+      width:1.3rem;
+      height:2rem;
+      background:url('../../../assets/images/arr.png') no-repeat;
+      background-size:100%;
+      position:absolute;
+      right:2vw;
+      top:49%;
+      z-index:99;
+    }
+
+    .desc-container{
+      height:100%;
+    }
+
+    .first, .second, .third, .fourth, .fifth, .sixth{
+      display:flex;
+      flex-direction:row;
+      justify-content:center;;
+    }
+
+    .first{
+      height:100%;
+      background:url('../../../assets/images/firstpage.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .first .title{
+      position:absolute;
+      width:3.2rem;
+      height:17.8rem;
+      background:url('../../../assets/images/zi.png') no-repeat;
+      background-size:100%;
+      top:3rem;
+      right:3.5rem;
+    }
+
+    .second{
+      height:100%;
+      background:url('../../../assets/images/miaoyu_b.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .third{
+      height:100%;
+      background:url('../../../assets/images/zhanguan_b.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .fourth{
+      height:100%;
+      background:url('../../../assets/images/canting_b.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .fifth{
+      height:100%;
+      background:url('../../../assets/images/wenyi_b.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .sixth{
+      height:100%;
+      background:url('../../../assets/images/wenquan_b.jpg') no-repeat;
+      background-size:cover;
+    }
+
+    .cont{
+      width:100%;
+      text-align:center;
+    }
+
+    .photo{
+      max-height:78vh;
+      max-width:100%;
+    }
+
+    .goPlay{
+      width:8.4rem;
+      height:2.9rem;
+      background:url('../../../assets/images/more.png') no-repeat;
+      background-size:100%;
+      display:inline-block;
+      margin-top:1rem;
+    }
+
+    @media only screen and (width:320px) and (max-device-width:568px){
+      .photo{
+        max-height:75vh;
+      }
+
+      .goPlay{
+        margin-top:1rem;
+      }
+    }
+
+    @media only screen and (width:375px) and (max-device-width:667px){
+      .photo{
+        max-height:82vh;
+
+      }
+
+      .goPlay{
+        margin-top:1rem;
+      }
+    }
+
+    @media only screen and (width:414px) and (max-device-width:736px){
+      .photo{
+        max-height:75vh;
+
+      }
+
+      .goPlay{
+        margin-top:1rem;
+      }
+    }
+
+    .p_con{
+      margin:0 1.6rem;
+      position:relative;
+      margin-bottom:7.5rem;
+    }
+
+    .list{
+      width:100%;
+    }
+
+    .img-box{
+      position:relative;
+      margin:4vh 7% 2vh 7%;
+      max-width:86%;
+      width:auto;
+      display:inline-block;
+    }
+
+    .gif{
+      position:absolute;
+      left:3vw;
+      bottom:2vh;
+      width:9vw;
+    }
+
+  </style>
+  <% for (var css in htmlWebpackPlugin.files.css) { %>
+  <link href="../../<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+  <% } %>
+  <script>
+    var apiHost = '<%=htmlWebpackPlugin.options.apiHost %>';
+    var shareData = {};
+    shareData.timeLineTitle = '在东京，偶遇蒋方舟';
+    shareData.timeLineLink = 'https://v.yunpub.cn/marketing/jd/djyn?ref_u={{ uid }}';
+    shareData.timeLineImgUrl = 'https://v.yunpub.cn/assets/images/djyn_s.jpg';
+    shareData.appMessageTitle = '在东京，偶遇蒋方舟';
+    shareData.appMessageDesc = '蒋方舟与你分享她在东京的那一年';
+    shareData.appMessageLink = 'https://v.yunpub.cn/marketing/jd/djyn?ref_u={{ uid }}';
+    shareData.appMessageImgUrl = 'https://v.yunpub.cn/assets/images/djyn_s.jpg';
+  </script>
+</head>
+<body>
+<div id="button-next"></div>
+<div class="desc-container swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide first">
+    </div>
+    <div class="swiper-slide second">
+      <div class="cont">
+        <div class="img-box">
+          <img class="photo" src="../../../assets/images/miaoyu_p.jpg" alt="">
+          <img class="gif" src="../../../assets/images/play.gif" alt="">
+        </div>
+        <div class="goPlay"></div>
+      </div>
+    </div>
+    <div class="swiper-slide third">
+      <div class="cont">
+        <div class="img-box">
+          <img class="photo" src="../../../assets/images/zhanguan_p.jpg" alt="">
+          <img class="gif" src="../../../assets/images/play.gif" alt="">
+        </div>
+        <div class="goPlay"></div>
+      </div>
+    </div>
+    <div class="swiper-slide fourth">
+      <div class="cont">
+        <div class="img-box">
+          <img class="photo" src="../../../assets/images/canting_p.jpg" alt="">
+          <img class="gif" src="../../../assets/images/play.gif" alt="">
+        </div>
+        <div class="goPlay"></div>
+      </div>
+    </div>
+    <div class="swiper-slide fifth">
+      <div class="cont">
+        <div class="img-box">
+          <img class="photo" src="../../../assets/images/wenyi_p.jpg" alt="">
+          <img class="gif" src="../../../assets/images/play.gif" alt="">
+        </div>
+
+        <div class="goPlay"></div>
+      </div>
+    </div>
+    <div class="swiper-slide sixth">
+      <div class="cont">
+        <div class="img-box">
+          <img class="photo" src="../../../assets/images/wenquan_p.jpg" alt="">
+          <img class="gif" src="../../../assets/images/play.gif" alt="">
+        </div>
+        <div class="goPlay"></div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+
+      <div id="app"></div>
+    </div>
+  </div>
+
+
+</div>
+<div class="audio-container">
+  <audio id="audio" autoplay="autoplay" preload="auto"></audio>
+</div>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="../../../assets/js/swiper-3.4.2.min.js"></script>
+<script>
+  var audioNames = {
+  {
+    shortList | dump | safe
+  }
+  }
+  ;
+  var longAudios = {
+  {
+    longList | dump | safe
+  }
+  }
+  ;
+  var lastPage = 5;
+  var audioPlay = document.querySelector('#audio')
+  var goBtns = document.querySelectorAll('.goPlay')
+  for (var i = 0 ; i < goBtns.length ; i++) {
+    goBtns[i].addEventListener('click' , goBtnEvent , false)
+  }
+
+  var swiper = new Swiper('.swiper-container' , {
+    paginationClickable:true ,
+//        autoHeight:true , //enable auto height
+    onSlideChangeEnd:function (swiper){
+      if (swiper.activeIndex < 6) {
+
+        audioPlay.src = audioNames[swiper.activeIndex - 1]
+        audioPlay.load()
+      } else {
+        audioPlay.pause()
+        swiper.disableTouchControl();
+        document.querySelector('#button-next').style.display = "none"
+      }
+
+    } ,
+
+  });
+
+  function goBtnEvent(){
+    lastPage = swiper.activeIndex
+    swiper.slideTo(6 , 0)
+    swiper.disableTouchControl();
+    document.querySelector('#button-next').style.display = "none"
+  }
+
+  function goBackEvent(){
+    swiper.enableTouchControl();
+    document.querySelector('#button-next').style.display = "inline-block"
+    swiper.slideTo(lastPage , 0);
+    lastPage = 5;
+  }
+
+  window.onload = function (){
+    (function (){
+      wx.config({
+        //                        debug:true , // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        debug:false , // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId:'{{apiData.appid}}' , // 必填，公众号的唯一标识
+        timestamp:'{{apiData.timestamp}}' ,// 必填，生成签名的时间戳
+        nonceStr:'{{apiData.noncestr}}' ,// 必填，生成签名的随机串
+        signature:'{{apiData.sign}}' ,// 必填，签名，见附录1
+        jsApiList:[
+          'checkJsApi' , 'onMenuShareTimeline' , 'showMenuItems' ,
+          'onMenuShareAppMessage' , 'scanQRCode'
+        ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+      });
+    })();
+
+    wx.ready(function (){
+      wx.showMenuItems({
+        menuList:[
+          'menuItem:profile' ,
+          'menuItem:addContact'
+        ]
+      });
+      wx.onMenuShareTimeline({
+        title:shareData.timeLineTitle ,
+        link:shareData.timeLineLink ,
+        imgUrl:shareData.timeLineImgUrl ,
+        success:function (){
+
+        } ,
+        cancel:function (){
+
+        }
+      });
+      wx.onMenuShareAppMessage({
+        title:shareData.appMessageTitle ,
+        desc:shareData.appMessageDesc ,
+        link:shareData.appMessageLink ,
+        imgUrl:shareData.appMessageImgUrl ,
+        success:function (){
+        } ,
+        cancel:function (){
+        }
+      });
+    });
+  }
+</script>
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script type="text/javascript" src="../../<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>
